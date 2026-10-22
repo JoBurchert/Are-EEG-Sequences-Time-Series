@@ -17,8 +17,8 @@ The download link is provided in download.md or follow this Link [data](https://
 
 ## Training and testing
 
-To train and test the methods in the paper, excute the run_baselines.py:
-Define the model and dataset you wish to run as agruments. For example, to run the InceptionTime model on the 
+To train and test the methods in the paper, execute the run_baselines.py:
+Define the model and dataset you wish to run as arguments. For example, to run the InceptionTime model on the 
 BCIC-IV-2a dataset in the subject-specific setting, run the following command:
 
 ```bash
