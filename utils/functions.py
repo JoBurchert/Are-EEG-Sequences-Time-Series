@@ -96,7 +96,7 @@ def trainNetwork(net, trainloader, validloader, testloader, model_path=None, mod
                 if verbose:
                     print(f'saving to {final_path}')
                 torch.save(net, final_path)
-                testnet = torch.load(final_path)
+                testnet = torch.load(final_path, weights_only=False)
                 if dataset.startswith('bcicha'):
                     test_acc = testNetwork_auc(testnet, testloader, device)
                 else:

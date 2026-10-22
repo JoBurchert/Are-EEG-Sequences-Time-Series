@@ -18,22 +18,20 @@ The download link is provided in download.md or follow this Link [data](https://
 ## Training and testing
 
 To train and test the methods in the paper, excute the run_baselines.py:
-Define the model and dataset you wish to run as agruments. For example, to run the MAtt model on the BCIC-IV-2a dataset, run the following command:
+Define the model and dataset you wish to run as agruments. For example, to run the InceptionTime model on the 
+BCIC-IV-2a dataset in the subject-specific setting, run the following command:
 
 ```bash
-python run_baselines.py --model MAtt --dataset bci --sub 
+python run_baselines.py --model inception --dataset bci --sub id
 ```
 
-For the subject-specific you can specify the subject number as follows:
-```bash 
-python run_baselines.py --model MAtt --dataset bci --sub id
-```
 where id is the subject number you want to train.
 
-For the subject-conditional approach you --sub 'all'. For the methods SA, CIC, CEC, and SE append NoSub, Emb, IdEmb, Head to the model name respectively. For example, to run the CEC approach for the inception model on the BCIC-IV-2a dataset, run the following command:
+For the subject-conditional approach set --sub 'all'. For the methods SA, CIC, CEC, and SE append NoSub, Emb, IdEmb, 
+Head to the model name respectively. For example, to run the CEC approach for the inception model on the BCIC-IV-2a dataset, run the following command:
 
 ```bash 
-python run_baselines.py --model inceptionIdEmb --dataset bci --sub all
+python run_baselines.py --model inceptionIdEmb --dataset bci --sub 'all'
 ```
 
 ## Reference

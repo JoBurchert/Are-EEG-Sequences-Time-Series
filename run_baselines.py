@@ -9,9 +9,7 @@ from mAtt.mAtt import mAtt_bci, mAtt_mamem, mAtt_cha
 from mAtt.mAtt import mAtt_bciNoSub, mAtt_bciHead, mAtt_bciEmb, mAtt_bciIdEmb
 from mAtt.mAtt import mAtt_mamemNoSub, mAtt_mamemHead, mAtt_mamemEmb, mAtt_mamemIdEmb
 from mAtt.mAtt import mAtt_chaNoSub, mAtt_chaHead, mAtt_chaEmb, mAtt_chaIdEmb
-from mAtt.vision_transformer import get_vit
-from mAtt.ts_mixer import *
-from mAtt.eegTCNet import *
+from mAtt.eegTCNet import EEGTCNet, EEGTCNetNoSub, EEGTCNetHead, EEGTCNetEmbedding, EEGTCNetIdEmbedding
 from utils.bciDataLoader import BCIDataLoader
 from utils.bciDataLoaderFull import BCIDataLoaderFull
 from utils.mamemDataloader import MAMEMDataLoader, MAMEMDataLoader_fixed
@@ -185,20 +183,6 @@ if __name__=='__main__':
         elif args['model'] == 'matt_chaIdEmb':
             net = mAtt_chaIdEmb(args['epochs'])
 
-        elif args['model'] == 'mixer':
-            net = TSMixer(args['dataset'], input_channels=in_channels, output_channels=num_pred_classes)
-        elif args['model'] == 'mixerNoSub':
-            net = TSMixerNoSub(args['dataset'], input_channels=in_channels, output_channels=num_pred_classes)
-        elif args['model'] == 'mixerHead':
-            raise NotImplementedError
-            net = TSMixerHead(args['dataset'], input_channels=in_channels, output_channels=num_pred_classes)
-        elif args['model'] == 'mixerEmb':
-            net = TSMixerEmb(args['dataset'], num_subjects=num_subjects, input_channels=in_channels, output_channels=num_pred_classes)
-        elif args['model'] == 'mixerIdEmb':
-            net = TSMixerIdEmb(args['dataset'], num_subjects=num_subjects, input_channels=in_channels, output_channels=num_pred_classes)
-
-        elif args['model'] == 'vit':
-            net = get_vit(args['dataset'], in_channels=in_channels, num_pred_classes=num_pred_classes)
         elif args['model'] == 'rocket':
             run_rocket(dataloader, args['rocket_kernel'], args['dataset'], tune=True)
         elif args['model'] == 'matt':
