@@ -1,5 +1,5 @@
-from mAtt.utils import *
-from mAtt import StiefelParameter
+from models.utils import *
+from models import StiefelParameter
 
 class MixOptimizer(object):
     """This is a meta optimizer which uses other optimizers for updating parameters

@@ -4,8 +4,8 @@ from torch.optim.optimizer import Optimizer
 from torch.autograd import Function
 import numpy as np
 
-from mAtt.utils import *
-from mAtt import StiefelParameter
+from models.utils import *
+from models import StiefelParameter
 
 class SPDTransform(nn.Module):
 

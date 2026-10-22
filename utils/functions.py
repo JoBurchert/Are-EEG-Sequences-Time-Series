@@ -3,7 +3,7 @@ import torch.nn as nn
 import sys
 import os
 sys.path.append("..") 
-from mAtt.optimizer import MixOptimizer
+from models.optimizer import MixOptimizer
 from sklearn.metrics import roc_auc_score as ras
 import numpy as np
 from utils.save_results import save_output

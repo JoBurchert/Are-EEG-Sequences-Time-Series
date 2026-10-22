@@ -1,15 +1,15 @@
 import torch
 import torch.nn as nn
 from utils.functions import trainNetwork, testNetwork, testNetwork_auc
-from mAtt.inception import InceptionModel, InceptionModelNoSub, InceptionModelEmb, InceptionModelIdEmb, InceptionModelHead
-from mAtt.inception import InceptionModel_4L, InceptionModelNoSub_4L, InceptionModelEmb_4L, InceptionModelIdEmb_4L, InceptionModelHead_4L
-from mAtt.resnet import ResNet, ResNetNoSub, ResNetHead, ResNetEmbedding, ResNetIdEmbedding
-from mAtt.rocket import run_rocket
-from mAtt.mAtt import mAtt_bci, mAtt_mamem, mAtt_cha
-from mAtt.mAtt import mAtt_bciNoSub, mAtt_bciHead, mAtt_bciEmb, mAtt_bciIdEmb
-from mAtt.mAtt import mAtt_mamemNoSub, mAtt_mamemHead, mAtt_mamemEmb, mAtt_mamemIdEmb
-from mAtt.mAtt import mAtt_chaNoSub, mAtt_chaHead, mAtt_chaEmb, mAtt_chaIdEmb
-from mAtt.eegTCNet import EEGTCNet, EEGTCNetNoSub, EEGTCNetHead, EEGTCNetEmbedding, EEGTCNetIdEmbedding
+from models.inception import InceptionModel, InceptionModelNoSub, InceptionModelEmb, InceptionModelIdEmb, InceptionModelHead
+from models.inception import InceptionModel_4L, InceptionModelNoSub_4L, InceptionModelEmb_4L, InceptionModelIdEmb_4L, InceptionModelHead_4L
+from models.resnet import ResNet, ResNetNoSub, ResNetHead, ResNetEmbedding, ResNetIdEmbedding
+from models.rocket import run_rocket
+from models.mAtt import mAtt_bci, mAtt_mamem, mAtt_cha
+from models.mAtt import mAtt_bciNoSub, mAtt_bciHead, mAtt_bciEmb, mAtt_bciIdEmb
+from models.mAtt import mAtt_mamemNoSub, mAtt_mamemHead, mAtt_mamemEmb, mAtt_mamemIdEmb
+from models.mAtt import mAtt_chaNoSub, mAtt_chaHead, mAtt_chaEmb, mAtt_chaIdEmb
+from models.eegTCNet import EEGTCNet, EEGTCNetNoSub, EEGTCNetHead, EEGTCNetEmbedding, EEGTCNetIdEmbedding
 from utils.bciDataLoader import BCIDataLoader
 from utils.bciDataLoaderFull import BCIDataLoaderFull
 from utils.mamemDataloader import MAMEMDataLoader, MAMEMDataLoader_fixed

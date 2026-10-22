@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from mAtt.spd import SPDTransform, SPDTangentSpace, SPDRectified
+from models.spd import SPDTransform, SPDTangentSpace, SPDRectified
 
 class signal2spd(nn.Module):
     # convert signal epoch to SPD matrix

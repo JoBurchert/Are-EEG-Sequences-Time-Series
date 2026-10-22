@@ -1,4 +1,4 @@
-name: mAtt_env
+name: EEGTS
 channels:
   - pytorch
   - defaults
@@ -63,4 +63,4 @@ dependencies:
   - zstd=1.5.2=hcb37349_0
   - pip:
     - scipy==1.5.4
-prefix: /Users/pao/Documents/anaconda3/envs/mAtt_env
+prefix: /Users/pao/Documents/anaconda3/envs/EEGTS
